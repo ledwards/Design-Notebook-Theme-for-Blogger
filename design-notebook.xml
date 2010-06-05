@@ -3,6 +3,22 @@
 <html expr:dir='data:blog.languageDirection' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
 <head>
 	<link href='http://fonts.googleapis.com/css?family=Reenie+Beanie' rel='stylesheet' type='text/css'></link>
+	
+		<link href='http://alexgorbatchev.com/pub/sh/current/styles/shCore.css' rel='stylesheet' type='text/css'/> 
+		
+		<script src='http://alexgorbatchev.com/pub/sh/current/scripts/shCore.js' type='text/javascript'/> 
+		<script src='http://alexgorbatchev.com/pub/sh/current/scripts/shBrushXml.js' type='text/javascript'/> 
+		<script src='http://alexgorbatchev.com/pub/sh/current/scripts/shBrushCss.js' type='text/javascript'/> 
+		<script src='http://alexgorbatchev.com/pub/sh/current/scripts/shBrushJScript.js' type='text/javascript'/> 
+		<script src='http://alexgorbatchev.com/pub/sh/current/scripts/shBrushRuby.js' type='text/javascript'/> 
+		<script src='http://alexgorbatchev.com/pub/sh/current/scripts/shBrushBash.js' type='text/javascript'/>
+		<script src='http://alexgorbatchev.com/pub/sh/current/scripts/shBrushPlain.js' type='text/javascript'/>  
+		
+		<script type='text/javascript'>
+		SyntaxHighlighter.config.bloggerMode = true;
+		SyntaxHighlighter.all();
+		</script>
+	
 <b:if cond='data:blog.pageType == &quot;index&quot;'>
 <title><data:blog.title/></title>
 <b:else/>
@@ -66,6 +82,12 @@ border:0;
 
 a img {
 border-width:0;
+}
+
+code {
+padding-right:10px;
+padding-left:10px;
+font-family:"courier new",courier,monospace;
 }
 
 /* Header
@@ -421,6 +443,79 @@ float:left;
 margin-left:80px;
 }
 
+/* Syntax Highlighting 
+----------------------------------------------- */
+.syntaxhighlighter .plain,
+.syntaxhighlighter .plain a
+{ 
+	color: #000 !important;
+}
+
+.syntaxhighlighter .comments,
+.syntaxhighlighter .comments a
+{ 
+	color: #008200 !important;
+}
+
+.syntaxhighlighter .string,
+.syntaxhighlighter .string a
+{
+	color: blue !important; 
+}
+
+.syntaxhighlighter .keyword
+{ 
+	color: #069 !important; 
+	font-weight: bold !important; 
+}
+
+.syntaxhighlighter .preprocessor 
+{ 
+	color: gray !important; 
+}
+
+.syntaxhighlighter .variable 
+{ 
+	color: #a70 !important; 
+}
+
+.syntaxhighlighter .value
+{ 
+	color: #090 !important; 
+}
+
+.syntaxhighlighter .functions
+{ 
+	color: #ff1493 !important; 
+}
+
+.syntaxhighlighter .constants
+{ 
+	color: #0066CC !important; 
+}
+
+.syntaxhighlighter .script
+{ 
+	background-color: yellow !important;
+}
+
+.syntaxhighlighter .color1,
+.syntaxhighlighter .color1 a
+{ 
+	color: #808080 !important; 
+}
+
+.syntaxhighlighter .color2,
+.syntaxhighlighter .color2 a
+{ 
+	color: #ff1493 !important; 
+}
+
+.syntaxhighlighter .color3,
+.syntaxhighlighter .color3 a
+{ 
+	color: red !important; 
+}
 
 ]]></b:skin>
   </head>

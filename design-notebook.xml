@@ -40,7 +40,7 @@ text-align:left;
 }
 
 body {
-font-family:'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;
 font-size:11px;
 vertical-align:top;
 background:#4d4b4c url(images/bg-wide.png) repeat-y top center;
@@ -135,7 +135,7 @@ font:normal normal 100% Georgia, Serif;
 }
 
 #content-wrapper {
-font-family:'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;
 font-size:11px;
 line-height:1.82em;
 padding:10px 10px 0;
@@ -169,9 +169,14 @@ overflow:hidden;
 ----------------------------------------------- */
 
 .sidebar h2 {
-font-size:17px;
-text-transform:uppercase;
-font-weight:normal;
+display:block;
+padding:2px 0 10px;
+font-family: 'Reenie Beanie', Georgia, serif;
+font-size:24px;
+letter-spacing:1px;
+line-height:20px;
+color:#000000;
+text-decoration:none;
 }
 
 /* Posts
@@ -197,6 +202,7 @@ display:block;
 padding:2px 0 10px;
 font-family: 'Reenie Beanie', Georgia, serif;
 font-size:24px;
+letter-spacing:1px;
 line-height:20px;
 color:#000000;
 text-decoration:none;
@@ -208,12 +214,13 @@ color:#D5070E;
 
 .post-body {
 line-height:1.6em;
-margin-top: -30px;
+margin-top: -20px;
+width: 350px;
 }
 
-.post-body div {
-font-family:Georgia,Serif;
-width: 80%;
+.post-body div, div.post-body {
+font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;
+font-size:11px;
 }
 
 .post-body blockquote {
@@ -371,8 +378,8 @@ border:1px solid #cccccc;
 margin:0;
 text-transform:uppercase;
 letter-spacing:.1em;
-font:normal normal 78% 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-color:#999999;
+font:normal normal 78% 'Helvetica Neue', Helvetica, Arial, sans-serif;
+color:#000000;
 font-weight:bold;
 line-height:1.6em;
 }
@@ -387,7 +394,7 @@ line-height:1.6em;
 }
 
 .profile-link {
-font:normal normal 78% 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+font:normal normal 78% 'Helvetica Neue', Helvetica, Arial, sans-serif;
 text-transform:uppercase;
 letter-spacing:.1em;
 }
@@ -399,7 +406,7 @@ letter-spacing:.1em;
 clear:both;
 width:980px;
 color:#000000;
-font-family:'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;
 height:80px;
 background:url(http://content.screencast.com/users/Terron/folders/Design%20Notebook%20Theme/media/46c244fd-7fbe-4864-9dee-0fd95cd4386f/footer.png) no-repeat bottom center;
 }
@@ -953,6 +960,8 @@ margin-left:80px;
     <b:include name='quickedit'/>
   </div>
 </b:includable>
+</b:widget>
+<b:widget id='Feed1' locked='false' title='RSS Feed' type='Feed'>
 </b:widget>
 <b:widget id='Profile1' locked='false' title='About Me' type='Profile'>
 </b:widget>

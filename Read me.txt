@@ -1,0 +1,53 @@
+/*-----------------------------------------------
+
+Name              :  Notes
+Blogger Theme by  :  AskerAkbar
+URL               :  www.BloggerThemes.net
+
+Notes blogger theme comes under a Creative Commons license.
+They are free of charge to use as a theme for your blog and 
+you can make changes to the templates to suit your needs. 
+but please you must keep the footer credit links intact which 
+provides credit to its authors.
+
+-----------------------------------------------*/
+
+============
+INSTRUCTIONS
+============
+
+
+UPLOADING THE THEME
+------------------------------------------------------------
+
+1. Download your Blogger XML Theme 
+   The theme is contained in a zip file (winzip, winrar), ensure you have extracted the XML theme.
+
+2. Log in to your Blogger dashboard and go to Layout > Edit HTML
+
+3. Ensure you back up your old theme in case you decide to use it again. To do this, click on the "download full theme" link and save the file to your hard drive.
+
+4. Look for the section near the top where you can browse for your XML theme:
+
+5. Enter the location of your theme and press "upload".
+
+6. The HTML of your new theme will now appear in the box below. You can preview your theme or simply save to start using it!
+
+7. Enjoy!
+
+
+**If you need any help leave a comment on Bloggethemes.net**
+
+For more Bloggerthemes,Tutorials and Resources.
+
+Visit www.BloggerThemes.net
+
+
+
+
+
+
+
+
+
+

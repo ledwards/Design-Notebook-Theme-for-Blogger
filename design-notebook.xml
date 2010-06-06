@@ -95,6 +95,12 @@ color:#000000;
 margin-left:30px;
 }
 
+/* Blogger-Specific
+-----------------------------------------------*/
+.status-msg-wrap {
+margin-bottom: 0 0 10px 0;
+}
+
 /* Header
 -----------------------------------------------*/
 #header-wrapper {

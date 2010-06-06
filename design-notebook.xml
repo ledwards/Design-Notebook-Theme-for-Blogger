@@ -29,9 +29,8 @@
 
 /*-------------------------------------------------------
 
-Name              :  Design Notebook
-Blogger Theme by  :  Lee Edwards
-URL               :  designnotebooktheme.blogspot.com
+Design Notebook Theme by Lee Edwards
+http://designnotebooktheme.blogspot.com
 
 Design Notebook theme is licensed under Creative Commons.
 You are free to use, distribute, modify, and republish
@@ -84,10 +83,16 @@ a img {
 border-width:0;
 }
 
-code {
-padding-right:10px;
-padding-left:10px;
-font-family:"courier new",courier,monospace;
+ul li {
+list-style-type:disc;
+color:#000000;
+margin-left:30px;
+}
+
+ol li {
+list-style-type:decimal;
+color:#000000;
+margin-left:30px;
 }
 
 /* Header
@@ -210,10 +215,9 @@ margin-top: 10px;
 }
 
 h2.date-header {
-font-size:9px;
 color:#000000;
-text-align: right;
-width: 80%;
+font-size:16px;
+line-height:10px;
 }
 
 .post {
@@ -410,7 +414,7 @@ line-height:1.6em;
 }
 
 .profile-datablock {
-margin:.5em 0;
+margin:0 0 -5px;
 }
 
 .profile-textblock {
@@ -1020,7 +1024,44 @@ margin-left:80px;
 
       <div id='sidebar-wrapper'>
         <b:section class='sidebar' id='sidebar' preferred='yes'>
-<b:widget id='Profile1' locked='false' title='About Me' type='Profile'>
+<b:widget id='Label1' locked='false' title='Labels' type='Label'>
+<b:includable id='main'>
+  <b:if cond='data:title'>
+    <h2><data:title/></h2>
+  </b:if>
+  <div expr:class='&quot;widget-content &quot; + data:display + &quot;-label-widget-content&quot;'>
+    <b:if cond='data:display == &quot;list&quot;'>
+      <ul>
+      <b:loop values='data:labels' var='label'>
+        <li>
+          <b:if cond='data:blog.url == data:label.url'>
+            <span expr:dir='data:blog.languageDirection'><data:label.name/></span>
+          <b:else/>
+            <a expr:dir='data:blog.languageDirection' expr:href='data:label.url'><data:label.name/></a>
+          </b:if>
+          <b:if cond='data:showFreqNumbers'>
+            <span dir='ltr'>(<data:label.count/>)</span>
+          </b:if>
+        </li>
+      </b:loop>
+      </ul>
+    <b:else/>
+      <b:loop values='data:labels' var='label'>
+        <span expr:class='&quot;label-size label-size-&quot; + data:label.cssSize'>
+          <b:if cond='data:blog.url == data:label.url'>
+            <span expr:dir='data:blog.languageDirection'><data:label.name/></span>
+          <b:else/>
+            <a expr:dir='data:blog.languageDirection' expr:href='data:label.url'><data:label.name/></a>
+          </b:if>
+          <b:if cond='data:showFreqNumbers'>
+            <span class='label-count' dir='ltr'>(<data:label.count/>)</span>
+          </b:if>
+        </span>
+      </b:loop>
+    </b:if>
+    <b:include name='quickedit'/>
+  </div>
+</b:includable>
 </b:widget>
 <b:widget id='BlogArchive1' locked='false' title='Blog Archive' type='BlogArchive'>
 <b:includable id='main'>
@@ -1105,49 +1146,9 @@ margin-left:80px;
   </ul>
 </b:includable>
 </b:widget>
-<b:widget id='Label1' locked='false' title='Labels' type='Label'>
-<b:includable id='main'>
-  <b:if cond='data:title'>
-    <h2><data:title/></h2>
-  </b:if>
-  <div expr:class='&quot;widget-content &quot; + data:display + &quot;-label-widget-content&quot;'>
-    <b:if cond='data:display == &quot;list&quot;'>
-      <ul>
-      <b:loop values='data:labels' var='label'>
-        <li>
-          <b:if cond='data:blog.url == data:label.url'>
-            <span expr:dir='data:blog.languageDirection'><data:label.name/></span>
-          <b:else/>
-            <a expr:dir='data:blog.languageDirection' expr:href='data:label.url'><data:label.name/></a>
-          </b:if>
-          <b:if cond='data:showFreqNumbers'>
-            <span dir='ltr'>(<data:label.count/>)</span>
-          </b:if>
-        </li>
-      </b:loop>
-      </ul>
-    <b:else/>
-      <b:loop values='data:labels' var='label'>
-        <span expr:class='&quot;label-size label-size-&quot; + data:label.cssSize'>
-          <b:if cond='data:blog.url == data:label.url'>
-            <span expr:dir='data:blog.languageDirection'><data:label.name/></span>
-          <b:else/>
-            <a expr:dir='data:blog.languageDirection' expr:href='data:label.url'><data:label.name/></a>
-          </b:if>
-          <b:if cond='data:showFreqNumbers'>
-            <span class='label-count' dir='ltr'>(<data:label.count/>)</span>
-          </b:if>
-        </span>
-      </b:loop>
-    </b:if>
-    <b:include name='quickedit'/>
-  </div>
-</b:includable>
+<b:widget id='Profile1' locked='false' title='About Me' type='Profile'>
 </b:widget>
-<b:widget id='Followers1' locked='false' title='Followers' type='Followers'>
-</b:widget>
-<b:widget id='Feed1' locked='false' title='RSS Feed' type='Feed'>
-</b:widget>
+<b:widget id='Subscribe1' locked='false' title='Subscribe' type='Subscribe'/>
 </b:section>
       </div>
 
@@ -1156,22 +1157,15 @@ margin-left:80px;
 
     </div> <!-- end content-wrapper -->
 
-<!--
-Design Notebook theme is licensed under Creative Commons.
-You are free to use, distribute, modify, and republish
-as long as you keep the footer attributions intact.
--->
-
-
     <div id='footer-wrapper'>
 
 <div id='footer-left'>
-(c) 2010 <a expr:href='data:blog.homepageUrl'><data:blog.author/></a>
+(c) 2010 <a expr:href='data:blog.homepageUrl'><data:blog.title/></a>
 </div>
 
 <div id='footer-right'>
-<a href='http://designnotebooktheme.blogspot.com'>theme</a> by <a href="http://ledwards.com">Lee Edwards</a> ::
-<a href ='http://dennern.deviantart.com/#/d1b51fp'>artwork</a> by <a href='http://dennern.deviantart.com'>dennern</a> :: <a href='http://www.bloggerthemes.net/2009/12/notes.html'>layout</a> by <a href='http://www.BloggerThemes.net' title='Bloggerthemes'>BloggerThemes</a>
+<a href='http://designnotebooktheme.blogspot.com'>Blogger theme</a> by <a href="http://ledwards.com">Lee Edwards</a> with <a href='http://www.BloggerThemes.net' title='Bloggerthemes'>BloggerThemes</a> ::
+<a href ='http://dennern.deviantart.com/#/d1b51fp'>artwork</a> by <a href='http://dennern.deviantart.com'>dennern</a>
 </div>
 
 </div></div></div> <!-- end outer-wrapper -->

@@ -110,7 +110,7 @@ margin-top: 5px;
 
 #header {
 width:400px;
-padding:0 0 0 120px;
+padding:0 0 0 90px;
 }
 
 #header h1, #header h1 a, #header h1 a:visited {
@@ -165,7 +165,7 @@ background:url(http://content.screencast.com/users/Terron/folders/Design%20Noteb
 }
 
 #main-wrapper {
-margin-left:80px;
+margin-left:50px;
 margin-top: 20px;
 float:left;
 width:420px;
@@ -178,9 +178,9 @@ overflow:hidden;
 
 #sidebar-wrapper {
 float:left;
-margin-top:50px;
+margin-top:-25px;
 margin-left:80px;
-width:230px;
+width:350px;
 word-wrap:break-word;
 /* fix for long text breaking sidebar float in IE */
 overflow:hidden;
@@ -193,8 +193,9 @@ overflow:hidden;
 .sidebar h2 {
 display:block;
 padding:2px 0 10px;
-font-family: 'Reenie Beanie', Georgia, serif;
-font-size:24px;
+font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;
+font-size:16px;
+text-transform:uppercase;
 letter-spacing:1px;
 line-height:20px;
 color:#000000;
@@ -217,13 +218,15 @@ width: 80%;
 
 .post {
 margin-bottom:30px;
+width: 400px;
 }
 
 .post h3, .post h3 a {
 display:block;
 padding:2px 0 10px;
-font-family: 'Reenie Beanie', Georgia, serif;
-font-size:24px;
+font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;
+font-size:16px;
+text-transform:uppercase;
 letter-spacing:1px;
 line-height:20px;
 color:#000000;
@@ -237,7 +240,7 @@ color:#D5070E;
 .post-body {
 line-height:1.6em;
 margin-top: -20px;
-width: 350px;
+width: 380px;
 }
 
 .post-body div, div.post-body {
@@ -398,11 +401,11 @@ border:1px solid #cccccc;
 
 .profile-data {
 margin:0;
-text-transform:uppercase;
 letter-spacing:.1em;
 font:normal normal 78% 'Helvetica Neue', Helvetica, Arial, sans-serif;
 color:#000000;
 font-weight:bold;
+text-transform:uppercase;
 line-height:1.6em;
 }
 
@@ -1017,50 +1020,7 @@ margin-left:80px;
 
       <div id='sidebar-wrapper'>
         <b:section class='sidebar' id='sidebar' preferred='yes'>
-<b:widget id='Label1' locked='false' title='Labels' type='Label'>
-<b:includable id='main'>
-  <b:if cond='data:title'>
-    <h2><data:title/></h2>
-  </b:if>
-  <div expr:class='&quot;widget-content &quot; + data:display + &quot;-label-widget-content&quot;'>
-    <b:if cond='data:display == &quot;list&quot;'>
-      <ul>
-      <b:loop values='data:labels' var='label'>
-        <li>
-          <b:if cond='data:blog.url == data:label.url'>
-            <span expr:dir='data:blog.languageDirection'><data:label.name/></span>
-          <b:else/>
-            <a expr:dir='data:blog.languageDirection' expr:href='data:label.url'><data:label.name/></a>
-          </b:if>
-          <b:if cond='data:showFreqNumbers'>
-            <span dir='ltr'>(<data:label.count/>)</span>
-          </b:if>
-        </li>
-      </b:loop>
-      </ul>
-    <b:else/>
-      <b:loop values='data:labels' var='label'>
-        <span expr:class='&quot;label-size label-size-&quot; + data:label.cssSize'>
-          <b:if cond='data:blog.url == data:label.url'>
-            <span expr:dir='data:blog.languageDirection'><data:label.name/></span>
-          <b:else/>
-            <a expr:dir='data:blog.languageDirection' expr:href='data:label.url'><data:label.name/></a>
-          </b:if>
-          <b:if cond='data:showFreqNumbers'>
-            <span class='label-count' dir='ltr'>(<data:label.count/>)</span>
-          </b:if>
-        </span>
-      </b:loop>
-    </b:if>
-    <b:include name='quickedit'/>
-  </div>
-</b:includable>
-</b:widget>
-<b:widget id='Feed1' locked='false' title='RSS Feed' type='Feed'>
-</b:widget>
 <b:widget id='Profile1' locked='false' title='About Me' type='Profile'>
-</b:widget>
-<b:widget id='Followers1' locked='false' title='Followers' type='Followers'>
 </b:widget>
 <b:widget id='BlogArchive1' locked='false' title='Blog Archive' type='BlogArchive'>
 <b:includable id='main'>
@@ -1145,6 +1105,49 @@ margin-left:80px;
   </ul>
 </b:includable>
 </b:widget>
+<b:widget id='Label1' locked='false' title='Labels' type='Label'>
+<b:includable id='main'>
+  <b:if cond='data:title'>
+    <h2><data:title/></h2>
+  </b:if>
+  <div expr:class='&quot;widget-content &quot; + data:display + &quot;-label-widget-content&quot;'>
+    <b:if cond='data:display == &quot;list&quot;'>
+      <ul>
+      <b:loop values='data:labels' var='label'>
+        <li>
+          <b:if cond='data:blog.url == data:label.url'>
+            <span expr:dir='data:blog.languageDirection'><data:label.name/></span>
+          <b:else/>
+            <a expr:dir='data:blog.languageDirection' expr:href='data:label.url'><data:label.name/></a>
+          </b:if>
+          <b:if cond='data:showFreqNumbers'>
+            <span dir='ltr'>(<data:label.count/>)</span>
+          </b:if>
+        </li>
+      </b:loop>
+      </ul>
+    <b:else/>
+      <b:loop values='data:labels' var='label'>
+        <span expr:class='&quot;label-size label-size-&quot; + data:label.cssSize'>
+          <b:if cond='data:blog.url == data:label.url'>
+            <span expr:dir='data:blog.languageDirection'><data:label.name/></span>
+          <b:else/>
+            <a expr:dir='data:blog.languageDirection' expr:href='data:label.url'><data:label.name/></a>
+          </b:if>
+          <b:if cond='data:showFreqNumbers'>
+            <span class='label-count' dir='ltr'>(<data:label.count/>)</span>
+          </b:if>
+        </span>
+      </b:loop>
+    </b:if>
+    <b:include name='quickedit'/>
+  </div>
+</b:includable>
+</b:widget>
+<b:widget id='Followers1' locked='false' title='Followers' type='Followers'>
+</b:widget>
+<b:widget id='Feed1' locked='false' title='RSS Feed' type='Feed'>
+</b:widget>
 </b:section>
       </div>
 
@@ -1163,7 +1166,7 @@ as long as you keep the footer attributions intact.
     <div id='footer-wrapper'>
 
 <div id='footer-left'>
-Copyright 2010 <a expr:href='data:blog.homepageUrl'><data:blog.title/></a>
+(c) 2010 <a expr:href='data:blog.homepageUrl'><data:blog.author/></a>
 </div>
 
 <div id='footer-right'>
